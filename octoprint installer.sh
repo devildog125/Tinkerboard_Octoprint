@@ -17,3 +17,8 @@ sudo usermod -a -G dialout linaro
 wget https://github.com/devildog125/Tinkerboard_Octoprint/blob/master/octoprint.init && sudo mv octoprint.init /etc/init.d/octoprint
 wget https://github.com/foosel/OctoPrint/raw/master/scripts/octoprint.default && sudo mv octoprint.default /etc/default/octoprint
 sudo chmod +x /etc/init.d/octoprint
+
+sudo service octoprint stop
+sudo apt-get install haproxy
+
+wget https://github.com/devildog125/Tinkerboard_Octoprint/blob/master/haproxy.cfg && sudo mv haproxy.cfg /etc/haproxy/haproxy.cfg
